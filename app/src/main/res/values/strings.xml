@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LuckyNumber</string>
+    <string name="score">1000</string>
+    <string name="timer_disconnected">Timer: Disconnected</string>
+    <string name="result">0</string>
+    <string name="stake_value">Enter your stake value</string>
+    <string name="bet_value">Enter your bet value</string>
+    <string name="submit">submit</string>
+    <string name="disconnect">disconnect</string>
+    <string name="status">Please wait for 5 secs</string>
+    <string name="connect">CONNECT</string>
+    <string name="wait">Wait...</string>
+</resources>

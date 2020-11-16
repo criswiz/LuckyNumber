@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        android:paddingEnd="60dp"
+        android:text="@string/score"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/score_text_view_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="60dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            app:cardElevation="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_count"
+                    android:text="@string/timer_disconnected"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                    android:drawableStart="@drawable/ic_access_time_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_result"
+                    android:text="@string/result"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/win_text_view_bg"
+                    android:visibility="gone"
+                    android:padding="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txt_money"
+                    android:text="@string/result"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/money_text_bg"
+                    android:padding="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_bet_value"
+                android:hint="@string/bet_value"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_money_bet_value"
+                android:hint="@string/stake_value"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:text="@string/submit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btn_disconnect"
+                    android:text="@string/disconnect"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    style="@style/Base.Widget.AppCompat.Button"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_status"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/status"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
